@@ -1,0 +1,8 @@
+ChangeLog
+MANIFEST
+Makefile.PL
+README
+examples/lansat.pl
+lib/Geo/Format/Landsat/MTL.pm
+lib/Geo/Format/Landsat/MTL.pod
+META.yml                                 Module meta-data (added by MakeMaker)
