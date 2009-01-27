@@ -7,7 +7,7 @@ use strict;
 
 package Geo::Format::Landsat::MTL;
 use vars '$VERSION';
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 use base 'Exporter';
 
@@ -84,7 +84,6 @@ sub _process_group($)
 
     $data;
 }
-
 
 sub _cleanup_mtl($)
 {   my $data = shift;

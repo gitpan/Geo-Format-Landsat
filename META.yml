@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                Geo-Format-Landsat
-version:             0.01
+version:             0.02
 abstract:            Decode Landsat meta-data
 license:             perl
 author:              

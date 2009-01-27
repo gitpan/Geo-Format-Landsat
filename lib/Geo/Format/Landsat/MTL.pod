@@ -11,6 +11,12 @@ Geo::Format::Landsat::MTL - read landsat meta data from MTL file
 
  my ($type, $data) = landsat_mtl_from_file $filename;
 
+ # study the result.
+ use Data::Dumper;
+ warn Dumper $data;
+
+ print $data->{METADATA_FILE_INFO}{ORIGIN}, "\n";
+
 =head1 DESCRIPTION
 
 Process the content of a MTL file, as specified by document
@@ -25,11 +31,20 @@ B<landsat_mtl_from_file>(FILE)
 
 Read one Vgroup record from the FILE, specified by name or filehandle.
 
+Returned is a pair: the name of the record (for instance, C<L1_METADATA_FILE>)
+and the destructed content.  Each nested group is represented by a nested
+HASH.
+
+The HASHes contain keys in capitals, which are exactly the fields as
+found in the meta-data file.  Additionally, a number of lower-cased
+keys are added (the lower cased versions of some upper-cased names)
+with smart processed information.
+
 =back
 
 =head1 SEE ALSO
 
-This module is part of Geo-Format-Landsat distribution version 0.01,
+This module is part of Geo-Format-Landsat distribution version 0.02,
 built on January 27, 2009. Website: F<http://perl.overmeer.net/geo/>
 All modules in this suite:
 L</Geo::Point>,

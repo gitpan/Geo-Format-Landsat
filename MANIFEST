@@ -5,4 +5,6 @@ README
 examples/lansat.pl
 lib/Geo/Format/Landsat/MTL.pm
 lib/Geo/Format/Landsat/MTL.pod
+t/01use.t
+t/99pod.t
 META.yml                                 Module meta-data (added by MakeMaker)
